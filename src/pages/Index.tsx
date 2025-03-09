@@ -5,6 +5,8 @@ import StoreHeading from '@/components/StoreHeading';
 import ProductCategory from '@/components/ProductCategory';
 import LatestProduct from '@/components/LatestProduct';
 import AppleHelp from '@/components/AppleHelp';
+import AppleHelpOptions from '@/components/AppleHelpOptions';
+import AppleStoreDifference from '@/components/AppleStoreDifference';
 
 const Index = () => {
   useEffect(() => {
@@ -124,6 +126,12 @@ const Index = () => {
             />
           </div>
         </section>
+        
+        {/* Help is here section */}
+        <AppleHelpOptions />
+        
+        {/* The Apple Store difference section */}
+        <AppleStoreDifference />
       </main>
     </div>
   );
