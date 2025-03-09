@@ -55,6 +55,8 @@ const LatestProduct: React.FC<LatestProductProps> = ({
             src={imageSrc} 
             alt={title} 
             className="max-w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+            onError={(e) => console.error(`Failed to load image: ${imageSrc}`)}
           />
         </div>
       </div>

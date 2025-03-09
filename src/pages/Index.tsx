@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import StoreHeading from '@/components/StoreHeading';
@@ -96,7 +97,7 @@ const Index = () => {
               title="MacBook Air"
               withIntelligence={true}
               price="₹99900.00*"
-              imageSrc="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba15-m3-startframe-202403?wid=1482&hei=1070&fmt=jpeg&qlt=90&.v=1708057829211"
+              imageSrc="/lovable-uploads/ef2b8076-bf92-4278-a190-3a2b7efd7bb6.png"
               index={0}
               customBg="linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%)"
               customTextColor="text-apple-gray-600"
