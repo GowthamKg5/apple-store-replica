@@ -8,6 +8,9 @@ interface LatestProductProps {
   price: string;
   imageSrc: string;
   index: number;
+  customBg?: string;
+  customTextColor?: string;
+  appleIntelligenceColor?: string;
 }
 
 const LatestProduct: React.FC<LatestProductProps> = ({
@@ -16,28 +19,34 @@ const LatestProduct: React.FC<LatestProductProps> = ({
   withIntelligence = true,
   price,
   imageSrc,
-  index
+  index,
+  customBg,
+  customTextColor,
+  appleIntelligenceColor
 }) => {
   return (
     <div 
       className={`rounded-2xl overflow-hidden group animate-fade-in delayed-${index * 100}`}
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className={`${index === 2 ? 'bg-black' : 'bg-apple-gray-100'} p-6 h-full flex flex-col`}>
+      <div 
+        className={`${customBg ? '' : index === 2 ? 'bg-black' : 'bg-apple-gray-100'} p-6 h-full flex flex-col`}
+        style={customBg ? { background: customBg } : {}}
+      >
         <div className="mb-auto">
-          <p className="text-xs font-medium uppercase text-apple-gray-500 mb-2">
+          <p className={`text-xs font-medium uppercase ${customTextColor || (index === 2 ? 'text-white' : 'text-apple-gray-500')} mb-2`}>
             {preOrderText}
           </p>
-          <h3 className={`text-3xl font-medium ${index === 2 ? 'text-white' : 'text-apple-gray-600'} mb-2`}>
+          <h3 className={`text-3xl font-medium ${customTextColor || (index === 2 ? 'text-white' : 'text-apple-gray-600')} mb-2`}>
             {title}
           </h3>
           {withIntelligence && (
-            <p className={`text-sm ${index === 2 ? 'text-white' : 'text-apple-gray-600'} flex items-center`}>
+            <p className={`text-sm ${appleIntelligenceColor || customTextColor || (index === 2 ? 'text-white' : 'text-apple-gray-600')} flex items-center`}>
               Apple Intelligence
               <sup className="text-xs ml-0.5">1</sup>
             </p>
           )}
-          <p className={`text-sm ${index === 2 ? 'text-white' : 'text-apple-gray-600'} mt-2`}>
+          <p className={`text-sm ${customTextColor || (index === 2 ? 'text-white' : 'text-apple-gray-600')} mt-2`}>
             From {price}
           </p>
         </div>

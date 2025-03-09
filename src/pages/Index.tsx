@@ -97,8 +97,11 @@ const Index = () => {
               title="MacBook Air"
               withIntelligence={true}
               price="₹99900.00*"
-              imageSrc="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-15-cto-hero-202411?wid=566&hei=388&fmt=jpeg&qlt=90&.v=1718143546301"
+              imageSrc="/lovable-uploads/9b402711-ebc4-4e00-8e60-91daedb131b9.png"
               index={0}
+              customBg="linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1%)"
+              customTextColor="text-apple-gray-600"
+              appleIntelligenceColor="text-blue-500"
             />
             <LatestProduct 
               preOrderText="PRE-ORDER NOW"
